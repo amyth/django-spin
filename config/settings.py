@@ -43,7 +43,9 @@ TP_APPS = []
 
 SPIN_APPS = [
     'apps.accounts',
-    'apps.home'
+    'apps.home',
+    'apps.catalog',
+    'apps.orders',
 ]
 
 INSTALLED_APPS = DJ_APPS + TP_APPS + SPIN_APPS
