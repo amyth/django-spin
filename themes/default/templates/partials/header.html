@@ -1,0 +1,44 @@
+{% load static from staticfiles %}
+
+<div class="top-bar">
+    <div class="container">
+        <ul class="horizontal pull-right">
+            <li><a href="#">Advertise</a></li>
+            <li><a href="#">Track Order (Coming Soon)</a></li>
+            <li><a href="#">Contact Us</a></li>
+            {% if not request.user.is_authenticated %}
+            <li><a href="#">Rohit</a></li>
+            {% endif %}
+        </ul>
+    </div>
+</div>
+<nav class="navbar navbar-default">
+    <div class="container">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="{% url 'home:index' %}"><img src="{% static 'images/logo.png' %}" alt="Online Grocery Shopping" /></a>
+        </div>
+        <div class="collapse navbar-collapse">
+            <form class="navbar-form" method="GET">
+                <div class="input-group">
+                    <input type="text" id="searchinput" name="q" class="form-control" placeholder="What are you looking for ?">
+                    <button class="btn btn-default" type="submit">SEARCH</button>
+                </div>
+            </form>
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <button class="btn btn-default btn-cart" href="#">
+                        <i class="glyphicon glyphicon-shopping-cart"></i>CART
+                        <span class="badge">4</span>
+                    </button>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<div class="menu-bar">
+    <div class="container">
+        <ul class="horizontal">
+            <li><a href="#">Test</a></li>
+        </ul>
+    </div>
+</div>

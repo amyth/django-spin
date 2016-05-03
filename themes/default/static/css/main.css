@@ -1,0 +1,99 @@
+/** ex-primary : #38A977 */
+/** primary : #13B16B */
+/** secondary : #279E6A */
+
+
+body {
+    font-family: "Proxima Nova Semi", Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 14.5px;
+}
+
+.navbar, .navbar-default {
+    border: none;
+    box-shadow: none;
+    border-radius:0;
+    margin-bottom:0;
+}
+
+.navbar .navbar-brand {
+    height: 60px;
+    padding: 0 15px;
+}
+
+.navbar a.navbar-brand img {
+    border:0;
+    max-width: 150px;
+}
+
+.navbar-default, .top-bar {
+    background: #38A977;
+}
+
+.menu-bar {
+    background: #279E6A;
+}
+
+.top-bar, .top-bar a, .navbar, .navbar a, .menu-bar, .menu-bar a {
+    color: white;
+}
+
+ul.horizontal {
+    list-style: none;
+    padding:0;
+    margin-left: 0;
+}
+
+ul.horizontal li {
+    display: inline-block;
+    margin:0;
+    margin-right: 12px;
+}
+
+.top-bar ul.horizontal li {
+    font-size: 11px;
+}
+
+.menu-bar ul.horizontal > li > a {
+    text-transform: uppercase;
+}
+
+.navbar .input-group {
+    display: inline-block;
+    width: 65%;
+}
+
+.navbar .input-group .btn {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    padding: 10px 20px;
+    background: #FFDE00;
+    border: 0;
+    font-size: 13px;
+}
+
+.navbar-form {
+    display: inline;
+}
+
+#searchinput {
+    width:85%;
+    font-family: "Proxima Nova", Helvetica Neue, Helvetica, Arial, sans-serif;
+    box-shadow: none;
+    border:0;
+    padding: 19px;
+    padding-left: 25px;
+}
+.btn-cart i {
+    padding-right: 10px;
+}
+
+button.btn.btn-default.btn-cart {
+    border: 0;
+    padding: 9px 10px;
+    background: #D8FFEA;
+}
+
+.menu-bar ul.horizontal {
+    margin: 0;
+    padding: 10px 2px;
+}
