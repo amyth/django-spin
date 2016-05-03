@@ -1,5 +1,4 @@
 {% load static from staticfiles %}
-
 <div class="top-bar">
     <div class="container">
         <ul class="horizontal pull-right">
@@ -38,7 +37,25 @@
 <div class="menu-bar">
     <div class="container">
         <ul class="horizontal">
-            <li><a href="#">Test</a></li>
+            {% for cat in menu_categories %}
+            <li class="has-big-dropdown">
+                <a href="#"><span class="text">{{ cat.name }}</span> <span class="caret"></span></a>
+                <ul class="big-dropdown">
+                    <div class="container">
+                        {% for scat in cat.children.all %}
+                            <div class="col-sm-3">
+                                <li class="scat"><a href="#">{{ scat.name }}</a></li>
+                                <ul class="vertical">
+                                    {% for child in scat.children.all  %}
+                                    <li><a href="#">{{ child.name }}</a></li>
+                                    {% endfor %}
+                                </ul>
+                            </div>
+                        {% endfor %}
+                    </div>
+                </ul>
+            </li>
+            {% endfor %}
         </ul>
     </div>
 </div>

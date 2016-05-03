@@ -10,8 +10,15 @@ class Category(models.Model):
     )
 
     name = models.CharField(max_length=140)
-    parent = models.ForeignKey('self', blank=True, null=True)
+    parent = models.ForeignKey('self', blank=True, null=True,
+            related_name='children')
     level = models.IntegerField(default=0)
+
+    class Meta:
+        verbose_name_plural = _('Categories')
+
+    def __unicode__(self):
+        return u'%s (%s)' % (self.name, self.level)
 
 
 class Product(models.Model):

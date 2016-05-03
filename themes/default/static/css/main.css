@@ -6,6 +6,7 @@
 body {
     font-family: "Proxima Nova Semi", Helvetica Neue, Helvetica, Arial, sans-serif;
     font-size: 14.5px;
+    background-color: #f3f3f3;
 }
 
 .navbar, .navbar-default {
@@ -55,6 +56,12 @@ ul.horizontal li {
 
 .menu-bar ul.horizontal > li > a {
     text-transform: uppercase;
+    font-size: 12.3px;
+    font-family: "Proxima Nova", Helvetica Neue, Helvetica, Arial, sans-serif;
+    text-decoration: none;
+}
+.menu-bar ul.horizontal > li > a .text {
+    border-bottom: 1px dotted white;
 }
 
 .navbar .input-group {
@@ -95,5 +102,82 @@ button.btn.btn-default.btn-cart {
 
 .menu-bar ul.horizontal {
     margin: 0;
-    padding: 10px 2px;
+    padding:5px 2px 0;
 }
+
+.menu-bar ul.horizontal > li {
+    color: green;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    padding: 7px;
+}
+
+.menu-bar ul.horizontal > li a {
+    padding: 7px;
+}
+
+.menu-bar ul.horizontal > li:hover {
+    background: white;
+}
+
+.menu-bar ul.horizontal > li:hover a {
+    color: #38A977;
+}
+
+.menu-bar ul.horizontal > li:hover a ul.vertical a,
+.menu-bar ul.vertical > li:hover a {
+    color: #666 !important;
+}
+
+li.has-big-dropdown {
+}
+
+.big-dropdown {
+    display: none;
+    background: white;
+    position: absolute;
+    top: 129px;
+    width: 100%;
+    left: 0;
+    padding: 20px;
+}
+
+.menu-bar ul.horizontal > li .big-dropdown .scat > a,
+.menu-bar ul.horizontal > li:hover .big-dropdown .scat > a {
+    text-decoration: underline;
+    color: black;
+}
+
+.menu-bar ul.horizontal > li:hover .big-dropdown {
+    display: block;
+}
+
+.vertical {
+    list-style: none;
+    padding: 0;
+}
+
+.menu-bar ul.vertical {
+    margin: 15px 0;
+}
+
+.menu-bar .vertical li {
+    display: flex;
+    padding: 0;
+    margin-bottom: 5px;
+}
+
+.menu-bar ul.vertical li a {
+    padding: 0;
+    padding-left: 7px;
+    font-family: "Proxima Nova";
+    font-size: 13px;
+    color: #666;
+}
+
+.menu-bar ul.vertical li a {
+    color: #666;
+    text-decoration: underline;
+}
+
+
