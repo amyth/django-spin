@@ -38,6 +38,9 @@ class Variant(models.Model):
 
     product = models.ForeignKey(Product, related_name=_('variants'))
     price = models.BigIntegerField(_('price'), blank=True, null=True)
+    stores = models.ManyToManyField('home.Store')
+    quantity = models.BigIntegerField(default=0)
+    enabled = models.BooleanField(default=True)
 
     def __unicode__(self):
         return u'%s' % self.product.title
