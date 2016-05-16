@@ -17,11 +17,15 @@
         <!-- Javascript -->
         <script type="text/javascript" src="{% static 'js/jquery.js' %}"></script>
         <script type="text/javascript" src="{% static 'js/bootstrap.min.js' %}"></script>
+        <script type="text/javascript" src="{% static 'js/main.js' %}"></script>
     </head>
     <body>
         {% block header %}
             {% include 'partials/header.html' %}
         {% endblock header %}
+
+        {% block showcase %}
+        {% endblock showcase %}
     </body>
 </html>
 

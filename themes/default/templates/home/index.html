@@ -1,1 +1,29 @@
 {% extends 'layouts/base.html' %}
+
+
+{% block showcase %}
+<div class="showcase">
+    <div class="container">
+        <div class="col-sm-8">
+            <div class="sc-content">
+                <div class="sc-img">
+                </div>
+                <div class="sc-tabs">
+                    <ul class="horizontal">
+                        {% for f in featured %}
+                        <li data-url="{{f.url}}" data-img="{{f.image.url}}" data-index="{{ forloop.counter }}"><a href="{{ f.url }}">
+                                <div class="title">{{ f.title }}</div>
+                                <div class="subtitle">{{ f.subtitle }} </div>
+                            </a></li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            y
+        </div>
+        <div class="clearfix"></div>
+    </div>
+</div>
+{% endblock showcase %}
